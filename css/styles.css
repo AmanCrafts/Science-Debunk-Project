@@ -8,8 +8,13 @@ body{
 
 .land{
     /* I got this gradient form https://cssgradient.io/ */
-    background: rgb(2,0,36);
-    background: linear-gradient(135deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 25%, rgba(8,42,143,1) 50%, rgba(8,45,145,1) 75%, rgba(0,212,255,1) 100%);
+    
+    background: linear-gradient(
+        135deg,
+        rgba(0, 12, 45, 0.98) 0%,
+        rgba(0, 24, 90, 0.95) 50%,
+        rgba(0, 36, 125, 0.92) 100%
+    );
     left: 0;
     right: 0;
     top: 0;
@@ -35,14 +40,16 @@ body{
         radial-gradient(2px 2px at 40px 70px, #fff, rgba(0,0,0,0)),
         radial-gradient(3px 3px at 50px 160px, #fff, rgba(0,0,0,0)),
         radial-gradient(1px 1px at 90px 40px, #fff, rgba(0,0,0,0)),
-        radial-gradient(2px 2px at 130px 80px, #fff, rgba(224, 7, 7, 0)),
+        radial-gradient(2px 2px at 130px 80px, #fff, rgba(0, 0, 0, 0)),
         radial-gradient(3px 3px at 160px 120px, #fff, rgba(0,0,0,0)),
         radial-gradient(1px 1px at 180px 150px, #fff, rgba(0,0,0,0)),
         radial-gradient(2px 2px at 200px 200px, #fff, rgba(0,0,0,0)),
         radial-gradient(3px 3px at 220px 10px, #fff, rgba(0,0,0,0)),
         radial-gradient(1px 1px at 240px 220px, #fff, rgba(0,0,0,0));
     background-repeat: repeat;
-    background-size: 250px 250px;}
+    background-size: 250px 250px;
+    z-index: -1;
+}
 
 .logo-container{
     display: flex;
@@ -56,6 +63,11 @@ body{
     height: auto;    
 }
 
+.action-buttons {
+    display: flex;
+    gap: 2rem;
+}
+
 
 
 .github-btn, .explore-btn {
@@ -63,10 +75,24 @@ body{
     align-items: center;
 }
 
-.github-btn{
-    background: white;
-    padding: 10px 20px;
+.github-btn, .explore-btn {
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
     border-radius: 50px;
-    border: 1px solid rgba(255,255,255,0);
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    font-weight: 600;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    color: white;
+}
 
+
+.github-btn {
+    background: rgba(255, 255, 255, 0.9);
+    color: #333;
 }
