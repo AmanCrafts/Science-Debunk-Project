@@ -1,0 +1,22 @@
+/*==================================
+=         ANIMATIONS               =
+==================================*/
+.land::after{
+    animation: moveStars 30s linear infinite;
+}
+
+
+/*==================================
+=          KEYFRAMES               =
+==================================*/
+
+
+
+@keyframes moveStars {
+    from {
+        background-position: 0 0;
+    }
+    to {
+        background-position: -250px -250px;
+    }
+}
